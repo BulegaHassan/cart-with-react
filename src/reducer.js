@@ -29,7 +29,7 @@ const reducer = (state, action) => {
         };
       }
       return cartItem;
-    });
+    }).filter((cartItem) => cartItem.amount !== 0)
     return { ...state, cart: tempCart };
   }
   return state;
